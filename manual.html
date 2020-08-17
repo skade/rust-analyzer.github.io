@@ -33,13 +33,17 @@
   
   <header>
     <div id="header-inner">
-      <a class="site-title" href="/">
-        <img src="/assets/rust-analyzer.svg" alt="rust analyzer" id="header-logo">
-      </a>
-      <a class="nav-link" href="https://opencollective.com/rust-analyzer/">Sponsor</a>
-      <a class="nav-link" href="/manual.html">Docs</a>
-      <a class="nav-link" href="/blog">Blog</a>
-      <a class="nav-link" href="/thisweek">Changelog</a>
+      <div id="header-left">
+        <a class="site-title" href="/">
+          <img src="/assets/rust-analyzer.svg" alt="rust analyzer" id="header-logo">
+        </a>
+      </div>
+      <div id="header-right">
+        <a class="nav-link" href="https://opencollective.com/rust-analyzer/">Sponsor</a>
+        <a class="nav-link" href="/manual.html">Docs</a>
+        <a class="nav-link" href="/blog">Blog</a>
+        <a class="nav-link" href="/thisweek">Changelog</a>
+      </div>
     </div>
   </header>
   
@@ -736,7 +740,7 @@ Specifically, the <code>roots</code> setup will be different eventually.</p>
 <div class="sect2">
 <h3 id="expand-macro-recursively"><a class="anchor" href="#expand-macro-recursively"></a>Expand Macro Recursively</h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_ide/src/expand_macro.rs#L17">expand_macro.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ide/src/expand_macro.rs#L17">expand_macro.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Shows the full macro expansion of the macro at current cursor.</p>
@@ -763,7 +767,7 @@ Specifically, the <code>roots</code> setup will be different eventually.</p>
 <div class="sect2">
 <h3 id="extend-selection"><a class="anchor" href="#extend-selection"></a>Extend Selection</h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_ide/src/extend_selection.rs#L15">extend_selection.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ide/src/extend_selection.rs#L15">extend_selection.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Extends the current selection to the encompassing syntactic construct
@@ -791,7 +795,7 @@ Specifically, the <code>roots</code> setup will be different eventually.</p>
 <div class="sect2">
 <h3 id="file-structure"><a class="anchor" href="#file-structure"></a>File Structure</h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_ide/src/file_structure.rs#L17">file_structure.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ide/src/file_structure.rs#L17">file_structure.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Provides a tree of the symbols defined in the file. Can be used to</p>
@@ -831,7 +835,7 @@ Specifically, the <code>roots</code> setup will be different eventually.</p>
 <div class="sect2">
 <h3 id="go-to-definition"><a class="anchor" href="#go-to-definition"></a>Go to Definition</h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_ide/src/goto_definition.rs#L18">goto_definition.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ide/src/goto_definition.rs#L18">goto_definition.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Navigates to the definition of an identifier.</p>
@@ -858,7 +862,7 @@ Specifically, the <code>roots</code> setup will be different eventually.</p>
 <div class="sect2">
 <h3 id="go-to-implementation"><a class="anchor" href="#go-to-implementation"></a>Go to Implementation</h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_ide/src/goto_implementation.rs#L7">goto_implementation.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ide/src/goto_implementation.rs#L7">goto_implementation.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Navigates to the impl block of structs, enums or traits. Also implemented as a code lens.</p>
@@ -885,7 +889,7 @@ Specifically, the <code>roots</code> setup will be different eventually.</p>
 <div class="sect2">
 <h3 id="go-to-type-definition"><a class="anchor" href="#go-to-type-definition"></a>Go to Type Definition</h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_ide/src/goto_type_definition.rs#L6">goto_type_definition.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ide/src/goto_type_definition.rs#L6">goto_type_definition.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Navigates to the type of an identifier.</p>
@@ -912,7 +916,7 @@ Specifically, the <code>roots</code> setup will be different eventually.</p>
 <div class="sect2">
 <h3 id="hover"><a class="anchor" href="#hover"></a>Hover</h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_ide/src/hover.rs#L73">hover.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ide/src/hover.rs#L73">hover.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Shows additional information, like type of an expression or documentation for definition when "focusing" code.
@@ -922,14 +926,14 @@ Focusing is usually hovering with a mouse, but can also be triggered with a shor
 <div class="sect2">
 <h3 id="inlay-hints"><a class="anchor" href="#inlay-hints"></a>Inlay Hints</h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_ide/src/inlay_hints.rs#L42">inlay_hints.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ide/src/inlay_hints.rs#L41">inlay_hints.rs</a></p>
 </div>
 <div class="paragraph">
 <p>rust-analyzer shows additional information inline with the source code.
 Editors usually render this using read-only virtual text snippets interspersed with code.</p>
 </div>
 <div class="paragraph">
-<p>rust-analyzer shows hits for</p>
+<p>rust-analyzer shows hints for</p>
 </div>
 <div class="ulist">
 <ul>
@@ -971,7 +975,7 @@ This approach has limitations, the caret movement and bracket highlighting near 
 <div class="sect2">
 <h3 id="join-lines"><a class="anchor" href="#join-lines"></a>Join Lines</h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_ide/src/join_lines.rs#L12">join_lines.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ide/src/join_lines.rs#L12">join_lines.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Join selected lines into one, smartly fixing up whitespace, trailing commas, and braces.</p>
@@ -998,7 +1002,7 @@ This approach has limitations, the caret movement and bracket highlighting near 
 <div class="sect2">
 <h3 id="magic-completions"><a class="anchor" href="#magic-completions"></a>Magic Completions</h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_ide/src/completion.rs#L39">completion.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ide/src/completion.rs#L39">completion.rs</a></p>
 </div>
 <div class="paragraph">
 <p>In addition to usual reference completion, rust-analyzer provides some ✨magic✨
@@ -1091,7 +1095,7 @@ takes arguments, the cursor is positioned inside the parenthesis.</p>
 <div class="sect2">
 <h3 id="matching-brace"><a class="anchor" href="#matching-brace"></a>Matching Brace</h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_ide/src/matching_brace.rs#L7">matching_brace.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ide/src/matching_brace.rs#L7">matching_brace.rs</a></p>
 </div>
 <div class="paragraph">
 <p>If the cursor is on any brace (<code>&lt;&gt;(){}[]||</code>) which is a part of a brace-pair,
@@ -1120,7 +1124,7 @@ braces, so it won&#8217;t confuse generics with comparisons.</p>
 <div class="sect2">
 <h3 id="memory-usage"><a class="anchor" href="#memory-usage"></a>Memory Usage</h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_ide_db/src/change.rs#L166">change.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ide_db/src/change.rs#L166">change.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Clears rust-analyzer&#8217;s internal database and prints memory usage statistics.</p>
@@ -1147,7 +1151,7 @@ braces, so it won&#8217;t confuse generics with comparisons.</p>
 <div class="sect2">
 <h3 id="on-enter"><a class="anchor" href="#on-enter"></a>On Enter</h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_ide/src/typing/on_enter.rs#L15">on_enter.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ide/src/typing/on_enter.rs#L15">on_enter.rs</a></p>
 </div>
 <div class="paragraph">
 <p>rust-analyzer can override <kbd>Enter</kbd> key to make it smarter:</p>
@@ -1192,7 +1196,7 @@ braces, so it won&#8217;t confuse generics with comparisons.</p>
 <div class="sect2">
 <h3 id="on-typing-assists"><a class="anchor" href="#on-typing-assists"></a>On Typing Assists</h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_ide/src/typing.rs#L37">typing.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ide/src/typing.rs#L36">typing.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Some features trigger on typing certain characters:</p>
@@ -1211,7 +1215,7 @@ braces, so it won&#8217;t confuse generics with comparisons.</p>
 <div class="sect2">
 <h3 id="parent-module"><a class="anchor" href="#parent-module"></a>Parent Module</h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_ide/src/parent_module.rs#L12">parent_module.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ide/src/parent_module.rs#L12">parent_module.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Navigates to the parent module of the current module.</p>
@@ -1238,7 +1242,7 @@ braces, so it won&#8217;t confuse generics with comparisons.</p>
 <div class="sect2">
 <h3 id="run"><a class="anchor" href="#run"></a>Run</h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_ide/src/runnables.rs#L81">runnables.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ide/src/runnables.rs#L81">runnables.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Shows a popup suggesting to run a test/benchmark/binary <strong>at the current cursor
@@ -1267,7 +1271,7 @@ to a shortcut!</p>
 <div class="sect2">
 <h3 id="semantic-syntax-highlighting"><a class="anchor" href="#semantic-syntax-highlighting"></a>Semantic Syntax Highlighting</h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_ide/src/syntax_highlighting.rs#L34">syntax_highlighting.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ide/src/syntax_highlighting.rs#L33">syntax_highlighting.rs</a></p>
 </div>
 <div class="paragraph">
 <p>rust-analyzer highlights the code semantically.
@@ -1283,7 +1287,7 @@ We also give special modifier for <code>mut</code> and <code>&amp;mut</code> loc
 <div class="sect2">
 <h3 id="show-syntax-tree"><a class="anchor" href="#show-syntax-tree"></a>Show Syntax Tree</h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_ide/src/syntax_tree.rs#L9">syntax_tree.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ide/src/syntax_tree.rs#L9">syntax_tree.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Shows the parse tree of the current file. It exists mostly for debugging
@@ -1311,7 +1315,7 @@ rust-analyzer itself.</p>
 <div class="sect2">
 <h3 id="status"><a class="anchor" href="#status"></a>Status</h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_ide/src/status.rs#L25">status.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ide/src/status.rs#L25">status.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Shows internal statistic about memory usage of rust-analyzer.</p>
@@ -1338,7 +1342,7 @@ rust-analyzer itself.</p>
 <div class="sect2">
 <h3 id="structural-search-and-replace"><a class="anchor" href="#structural-search-and-replace"></a>Structural Search and Replace</h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_ide/src/ssr.rs#L7">ssr.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ssr/src/lib.rs#L6">lib.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Search and replace with named wildcards that will match any expression, type, path, pattern or item.
@@ -1359,8 +1363,8 @@ replacement occurs. For example if our replacement template is <code>foo::Bar</c
 code in the <code>foo</code> module, we&#8217;ll insert just <code>Bar</code>.</p>
 </div>
 <div class="paragraph">
-<p>Method calls should generally be written in UFCS form. e.g. <code>foo::Bar::baz($s, $a)</code> will match
-<code>$s.baz($a)</code>, provided the method call <code>baz</code> resolves to the method <code>foo::Bar::baz</code>.</p>
+<p>Inherent method calls should generally be written in UFCS form. e.g. <code>foo::Bar::baz($s, $a)</code> will
+match <code>$s.baz($a)</code>, provided the method call <code>baz</code> resolves to the method <code>foo::Bar::baz</code>.</p>
 </div>
 <div class="paragraph">
 <p>The scope of the search / replace will be restricted to the current selection if any, otherwise
@@ -1438,7 +1442,7 @@ it will apply to the whole workspace.</p>
 <div class="sect2">
 <h3 id="workspace-symbol"><a class="anchor" href="#workspace-symbol"></a>Workspace Symbol</h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_ide_db/src/symbol_index.rs#L143">symbol_index.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ide_db/src/symbol_index.rs#L142">symbol_index.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Uses fuzzy-search to find types, modules and functions by name across your
@@ -1498,7 +1502,7 @@ Cursor position or selection is signified by <code>┃</code> character.</p>
 </div>
 <h3 id="add_custom_impl" class="discrete"><code>add_custom_impl</code></h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_assists/src/handlers/add_custom_impl.rs#L14">add_custom_impl.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/assists/src/handlers/add_custom_impl.rs#L14">add_custom_impl.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Adds impl block for derived trait.</p>
@@ -1533,7 +1537,7 @@ Cursor position or selection is signified by <code>┃</code> character.</p>
 </div>
 <h3 id="add_explicit_type" class="discrete"><code>add_explicit_type</code></h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_assists/src/handlers/add_explicit_type.rs#L9">add_explicit_type.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/assists/src/handlers/add_explicit_type.rs#L9">add_explicit_type.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Specify type for a let binding.</p>
@@ -1564,7 +1568,7 @@ Cursor position or selection is signified by <code>┃</code> character.</p>
 </div>
 <h3 id="add_hash" class="discrete"><code>add_hash</code></h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_assists/src/handlers/raw_string.rs#L91">raw_string.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/assists/src/handlers/raw_string.rs#L91">raw_string.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Adds a hash to a raw string literal.</p>
@@ -1595,7 +1599,7 @@ Cursor position or selection is signified by <code>┃</code> character.</p>
 </div>
 <h3 id="add_impl_default_members" class="discrete"><code>add_impl_default_members</code></h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_assists/src/handlers/add_missing_impl_members.rs#L64">add_missing_impl_members.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/assists/src/handlers/add_missing_impl_members.rs#L64">add_missing_impl_members.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Adds scaffold for overriding default impl members.</p>
@@ -1660,7 +1664,7 @@ Cursor position or selection is signified by <code>┃</code> character.</p>
 </div>
 <h3 id="add_impl_missing_members" class="discrete"><code>add_impl_missing_members</code></h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_assists/src/handlers/add_missing_impl_members.rs#L24">add_missing_impl_members.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/assists/src/handlers/add_missing_impl_members.rs#L24">add_missing_impl_members.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Adds scaffold for required impl members.</p>
@@ -1721,7 +1725,7 @@ Cursor position or selection is signified by <code>┃</code> character.</p>
 </div>
 <h3 id="add_turbo_fish" class="discrete"><code>add_turbo_fish</code></h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_assists/src/handlers/add_turbo_fish.rs#L10">add_turbo_fish.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/assists/src/handlers/add_turbo_fish.rs#L10">add_turbo_fish.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Adds <code>::&lt;_&gt;</code> to a call of a generic method or function.</p>
@@ -1756,10 +1760,10 @@ Cursor position or selection is signified by <code>┃</code> character.</p>
 </div>
 <h3 id="apply_demorgan" class="discrete"><code>apply_demorgan</code></h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_assists/src/handlers/apply_demorgan.rs#L5">apply_demorgan.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/assists/src/handlers/apply_demorgan.rs#L5">apply_demorgan.rs</a></p>
 </div>
 <div class="paragraph">
-<p>Apply [De Morgan&#8217;s law](<a href="https://en.wikipedia.org/wiki/De_Morgan%27s_laws" class="bare">https://en.wikipedia.org/wiki/De_Morgan%27s_laws</a>).
+<p>Apply <a href="https://en.wikipedia.org/wiki/De_Morgan%27s_laws">De Morgan&#8217;s law</a>.
 This transforms expressions of the form <code>!l || !r</code> into <code>!(l &amp;&amp; r)</code>.
 This also works with <code>&amp;&amp;</code>. This assist can only be applied with the cursor
 on either <code>||</code> or <code>&amp;&amp;</code>, with both operands being a negation of some kind.
@@ -1791,7 +1795,7 @@ This means something of the form <code>!x</code> or <code>x != y</code>.</p>
 </div>
 <h3 id="auto_import" class="discrete"><code>auto_import</code></h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_assists/src/handlers/auto_import.rs#L20">auto_import.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/assists/src/handlers/auto_import.rs#L19">auto_import.rs</a></p>
 </div>
 <div class="paragraph">
 <p>If the name is unresolved, provides all possible imports for it.</p>
@@ -1826,7 +1830,7 @@ This means something of the form <code>!x</code> or <code>x != y</code>.</p>
 </div>
 <h3 id="change_return_type_to_result" class="discrete"><code>change_return_type_to_result</code></h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_assists/src/handlers/change_return_type_to_result.rs#L9">change_return_type_to_result.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/assists/src/handlers/change_return_type_to_result.rs#L11">change_return_type_to_result.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Change the function&#8217;s return type to Result.</p>
@@ -1849,7 +1853,7 @@ This means something of the form <code>!x</code> or <code>x != y</code>.</p>
 </div>
 <h3 id="change_visibility" class="discrete"><code>change_visibility</code></h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_assists/src/handlers/change_visibility.rs#L11">change_visibility.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/assists/src/handlers/change_visibility.rs#L11">change_visibility.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Adds or changes existing visibility specifier.</p>
@@ -1872,7 +1876,7 @@ This means something of the form <code>!x</code> or <code>x != y</code>.</p>
 </div>
 <h3 id="convert_to_guarded_return" class="discrete"><code>convert_to_guarded_return</code></h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_assists/src/handlers/early_return.rs#L21">early_return.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/assists/src/handlers/early_return.rs#L21">early_return.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Replace a large conditional with a guarded return.</p>
@@ -1917,7 +1921,7 @@ This means something of the form <code>!x</code> or <code>x != y</code>.</p>
 </div>
 <h3 id="expand_glob_import" class="discrete"><code>expand_glob_import</code></h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_assists/src/handlers/expand_glob_import.rs#L15">expand_glob_import.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/assists/src/handlers/expand_glob_import.rs#L14">expand_glob_import.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Expands glob imports.</p>
@@ -1968,7 +1972,7 @@ This means something of the form <code>!x</code> or <code>x != y</code>.</p>
 </div>
 <h3 id="extract_struct_from_enum_variant" class="discrete"><code>extract_struct_from_enum_variant</code></h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_assists/src/handlers/extract_struct_from_enum_variant.rs#L17">extract_struct_from_enum_variant.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/assists/src/handlers/extract_struct_from_enum_variant.rs#L16">extract_struct_from_enum_variant.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Extracts a struct from enum variant.</p>
@@ -1995,7 +1999,7 @@ This means something of the form <code>!x</code> or <code>x != y</code>.</p>
 </div>
 <h3 id="extract_variable" class="discrete"><code>extract_variable</code></h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_assists/src/handlers/extract_variable.rs#L13">extract_variable.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/assists/src/handlers/extract_variable.rs#L13">extract_variable.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Extracts subexpression into a variable.</p>
@@ -2028,7 +2032,7 @@ This means something of the form <code>!x</code> or <code>x != y</code>.</p>
 </div>
 <h3 id="fill_match_arms" class="discrete"><code>fill_match_arms</code></h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_assists/src/handlers/fill_match_arms.rs#L14">fill_match_arms.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/assists/src/handlers/fill_match_arms.rs#L14">fill_match_arms.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Adds missing clauses to a <code>match</code> expression.</p>
@@ -2077,7 +2081,7 @@ This means something of the form <code>!x</code> or <code>x != y</code>.</p>
 </div>
 <h3 id="fix_visibility" class="discrete"><code>fix_visibility</code></h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_assists/src/handlers/fix_visibility.rs#L10">fix_visibility.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/assists/src/handlers/fix_visibility.rs#L10">fix_visibility.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Makes inaccessible item public.</p>
@@ -2120,7 +2124,7 @@ This means something of the form <code>!x</code> or <code>x != y</code>.</p>
 </div>
 <h3 id="flip_binexpr" class="discrete"><code>flip_binexpr</code></h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_assists/src/handlers/flip_binexpr.rs#L5">flip_binexpr.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/assists/src/handlers/flip_binexpr.rs#L5">flip_binexpr.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Flips operands of a binary expression.</p>
@@ -2151,7 +2155,7 @@ This means something of the form <code>!x</code> or <code>x != y</code>.</p>
 </div>
 <h3 id="flip_comma" class="discrete"><code>flip_comma</code></h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_assists/src/handlers/flip_comma.rs#L5">flip_comma.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/assists/src/handlers/flip_comma.rs#L5">flip_comma.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Flips two comma-separated items.</p>
@@ -2182,7 +2186,7 @@ This means something of the form <code>!x</code> or <code>x != y</code>.</p>
 </div>
 <h3 id="flip_trait_bound" class="discrete"><code>flip_trait_bound</code></h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_assists/src/handlers/flip_trait_bound.rs#L9">flip_trait_bound.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/assists/src/handlers/flip_trait_bound.rs#L9">flip_trait_bound.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Flips two trait bounds.</p>
@@ -2205,7 +2209,7 @@ This means something of the form <code>!x</code> or <code>x != y</code>.</p>
 </div>
 <h3 id="generate_derive" class="discrete"><code>generate_derive</code></h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_assists/src/handlers/generate_derive.rs#L9">generate_derive.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/assists/src/handlers/generate_derive.rs#L9">generate_derive.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Adds a new <code>#[derive()]</code> clause to a struct or enum.</p>
@@ -2242,7 +2246,7 @@ This means something of the form <code>!x</code> or <code>x != y</code>.</p>
 </div>
 <h3 id="generate_from_impl_for_enum" class="discrete"><code>generate_from_impl_for_enum</code></h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_assists/src/handlers/generate_from_impl_for_enum.rs#L7">generate_from_impl_for_enum.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/assists/src/handlers/generate_from_impl_for_enum.rs#L7">generate_from_impl_for_enum.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Adds a From impl for an enum variant with one tuple field.</p>
@@ -2277,7 +2281,7 @@ This means something of the form <code>!x</code> or <code>x != y</code>.</p>
 </div>
 <h3 id="generate_function" class="discrete"><code>generate_function</code></h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_assists/src/handlers/generate_function.rs#L19">generate_function.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/assists/src/handlers/generate_function.rs#L19">generate_function.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Adds a stub function with a signature matching the function under the cursor.</p>
@@ -2324,7 +2328,7 @@ This means something of the form <code>!x</code> or <code>x != y</code>.</p>
 </div>
 <h3 id="generate_impl" class="discrete"><code>generate_impl</code></h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_assists/src/handlers/generate_impl.rs#L6">generate_impl.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/assists/src/handlers/generate_impl.rs#L7">generate_impl.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Adds a new inherent impl for a type.</p>
@@ -2363,7 +2367,7 @@ This means something of the form <code>!x</code> or <code>x != y</code>.</p>
 </div>
 <h3 id="generate_new" class="discrete"><code>generate_new</code></h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_assists/src/handlers/generate_new.rs#L10">generate_new.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/assists/src/handlers/generate_new.rs#L11">generate_new.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Adds a new inherent impl for a type.</p>
@@ -2402,7 +2406,7 @@ This means something of the form <code>!x</code> or <code>x != y</code>.</p>
 </div>
 <h3 id="inline_local_variable" class="discrete"><code>inline_local_variable</code></h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_assists/src/handlers/inline_local_variable.rs#L13">inline_local_variable.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/assists/src/handlers/inline_local_variable.rs#L13">inline_local_variable.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Inlines local variable.</p>
@@ -2435,7 +2439,7 @@ This means something of the form <code>!x</code> or <code>x != y</code>.</p>
 </div>
 <h3 id="introduce_named_lifetime" class="discrete"><code>introduce_named_lifetime</code></h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_assists/src/handlers/introduce_named_lifetime.rs#L12">introduce_named_lifetime.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/assists/src/handlers/introduce_named_lifetime.rs#L12">introduce_named_lifetime.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Change an anonymous lifetime to a named lifetime.</p>
@@ -2482,7 +2486,7 @@ This means something of the form <code>!x</code> or <code>x != y</code>.</p>
 </div>
 <h3 id="invert_if" class="discrete"><code>invert_if</code></h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_assists/src/handlers/invert_if.rs#L12">invert_if.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/assists/src/handlers/invert_if.rs#L12">invert_if.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Apply invert_if
@@ -2516,7 +2520,7 @@ on <code>if</code>.</p>
 </div>
 <h3 id="make_raw_string" class="discrete"><code>make_raw_string</code></h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_assists/src/handlers/raw_string.rs#L13">raw_string.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/assists/src/handlers/raw_string.rs#L13">raw_string.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Adds <code>r#</code> to a plain string literal.</p>
@@ -2547,7 +2551,7 @@ on <code>if</code>.</p>
 </div>
 <h3 id="make_usual_string" class="discrete"><code>make_usual_string</code></h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_assists/src/handlers/raw_string.rs#L52">raw_string.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/assists/src/handlers/raw_string.rs#L52">raw_string.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Turns a raw string into a plain string.</p>
@@ -2578,7 +2582,7 @@ on <code>if</code>.</p>
 </div>
 <h3 id="merge_imports" class="discrete"><code>merge_imports</code></h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_assists/src/handlers/merge_imports.rs#L14">merge_imports.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/assists/src/handlers/merge_imports.rs#L14">merge_imports.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Merges two imports with a common prefix.</p>
@@ -2603,7 +2607,7 @@ on <code>if</code>.</p>
 </div>
 <h3 id="merge_match_arms" class="discrete"><code>merge_match_arms</code></h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_assists/src/handlers/merge_match_arms.rs#L11">merge_match_arms.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/assists/src/handlers/merge_match_arms.rs#L11">merge_match_arms.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Merges identical match arms.</p>
@@ -2652,7 +2656,7 @@ on <code>if</code>.</p>
 </div>
 <h3 id="move_arm_cond_to_match_guard" class="discrete"><code>move_arm_cond_to_match_guard</code></h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_assists/src/handlers/move_guard.rs#L61">move_guard.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/assists/src/handlers/move_guard.rs#L67">move_guard.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Moves if expression from match arm body into a guard.</p>
@@ -2703,7 +2707,7 @@ on <code>if</code>.</p>
 </div>
 <h3 id="move_bounds_to_where_clause" class="discrete"><code>move_bounds_to_where_clause</code></h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_assists/src/handlers/move_bounds.rs#L10">move_bounds.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/assists/src/handlers/move_bounds.rs#L10">move_bounds.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Moves inline type bounds to a where clause.</p>
@@ -2734,7 +2738,7 @@ on <code>if</code>.</p>
 </div>
 <h3 id="move_guard_to_arm_body" class="discrete"><code>move_guard_to_arm_body</code></h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_assists/src/handlers/move_guard.rs#L8">move_guard.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/assists/src/handlers/move_guard.rs#L8">move_guard.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Moves match guard into match arm body.</p>
@@ -2764,19 +2768,23 @@ on <code>if</code>.</p>
 <div class="listingblock">
 <div class="title">After</div>
 <div class="content">
-<pre class="rouge highlight"><code data-lang="rust"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
+<pre class="rouge highlight"><code data-lang="rust"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
 </pre></td><td class="code"><pre><span class="k">enum</span> <span class="n">Action</span> <span class="p">{</span> <span class="n">Move</span> <span class="p">{</span> <span class="n">distance</span><span class="p">:</span> <span class="nb">u32</span> <span class="p">},</span> <span class="n">Stop</span> <span class="p">}</span>
 
 <span class="k">fn</span> <span class="nf">handle</span><span class="p">(</span><span class="n">action</span><span class="p">:</span> <span class="n">Action</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">match</span> <span class="n">action</span> <span class="p">{</span>
-        <span class="nn">Action</span><span class="p">::</span><span class="n">Move</span> <span class="p">{</span> <span class="n">distance</span> <span class="p">}</span> <span class="k">=&gt;</span> <span class="k">if</span> <span class="n">distance</span> <span class="o">&gt;</span> <span class="mi">10</span> <span class="p">{</span> <span class="nf">foo</span><span class="p">()</span> <span class="p">},</span>
+        <span class="nn">Action</span><span class="p">::</span><span class="n">Move</span> <span class="p">{</span> <span class="n">distance</span> <span class="p">}</span> <span class="k">=&gt;</span> <span class="k">if</span> <span class="n">distance</span> <span class="o">&gt;</span> <span class="mi">10</span> <span class="p">{</span>
+            <span class="nf">foo</span><span class="p">()</span>
+        <span class="p">},</span>
         <span class="mi">_</span> <span class="k">=&gt;</span> <span class="p">(),</span>
     <span class="p">}</span>
 <span class="p">}</span>
@@ -2785,7 +2793,7 @@ on <code>if</code>.</p>
 </div>
 <h3 id="remove_dbg" class="discrete"><code>remove_dbg</code></h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_assists/src/handlers/remove_dbg.rs#L8">remove_dbg.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/assists/src/handlers/remove_dbg.rs#L8">remove_dbg.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Removes <code>dbg!()</code> macro call.</p>
@@ -2816,7 +2824,7 @@ on <code>if</code>.</p>
 </div>
 <h3 id="remove_hash" class="discrete"><code>remove_hash</code></h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_assists/src/handlers/raw_string.rs#L115">raw_string.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/assists/src/handlers/raw_string.rs#L115">raw_string.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Removes a hash from a raw string literal.</p>
@@ -2847,7 +2855,7 @@ on <code>if</code>.</p>
 </div>
 <h3 id="remove_mut" class="discrete"><code>remove_mut</code></h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_assists/src/handlers/remove_mut.rs#L5">remove_mut.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/assists/src/handlers/remove_mut.rs#L5">remove_mut.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Removes the <code>mut</code> keyword.</p>
@@ -2878,7 +2886,7 @@ on <code>if</code>.</p>
 </div>
 <h3 id="reorder_fields" class="discrete"><code>reorder_fields</code></h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_assists/src/handlers/reorder_fields.rs#L10">reorder_fields.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/assists/src/handlers/reorder_fields.rs#L10">reorder_fields.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Reorder the fields of record literals and record patterns in the same order as in
@@ -2906,7 +2914,7 @@ the definition.</p>
 </div>
 <h3 id="replace_if_let_with_match" class="discrete"><code>replace_if_let_with_match</code></h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_assists/src/handlers/replace_if_let_with_match.rs#L13">replace_if_let_with_match.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/assists/src/handlers/replace_if_let_with_match.rs#L15">replace_if_let_with_match.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Replaces <code>if let</code> with an else branch with a <code>match</code> expression.</p>
@@ -2959,7 +2967,7 @@ the definition.</p>
 </div>
 <h3 id="replace_let_with_if_let" class="discrete"><code>replace_let_with_if_let</code></h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_assists/src/handlers/replace_let_with_if_let.rs#L14">replace_let_with_if_let.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/assists/src/handlers/replace_let_with_if_let.rs#L14">replace_let_with_if_let.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Replaces <code>let</code> with an <code>if-let</code>.</p>
@@ -3004,7 +3012,7 @@ the definition.</p>
 </div>
 <h3 id="replace_qualified_name_with_use" class="discrete"><code>replace_qualified_name_with_use</code></h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_assists/src/handlers/replace_qualified_name_with_use.rs#L9">replace_qualified_name_with_use.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/assists/src/handlers/replace_qualified_name_with_use.rs#L9">replace_qualified_name_with_use.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Adds a use statement for a given fully-qualified name.</p>
@@ -3031,7 +3039,7 @@ the definition.</p>
 </div>
 <h3 id="replace_unwrap_with_match" class="discrete"><code>replace_unwrap_with_match</code></h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_assists/src/handlers/replace_unwrap_with_match.rs#L17">replace_unwrap_with_match.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/assists/src/handlers/replace_unwrap_with_match.rs#L17">replace_unwrap_with_match.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Replaces <code>unwrap</code> a <code>match</code> expression. Works for Result and Option.</p>
@@ -3076,7 +3084,7 @@ the definition.</p>
 </div>
 <h3 id="split_import" class="discrete"><code>split_import</code></h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_assists/src/handlers/split_import.rs#L7">split_import.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/assists/src/handlers/split_import.rs#L7">split_import.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Wraps the tail of import into braces.</p>
@@ -3099,7 +3107,7 @@ the definition.</p>
 </div>
 <h3 id="unwrap_block" class="discrete"><code>unwrap_block</code></h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ra_assists/src/handlers/unwrap_block.rs#L12">unwrap_block.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/assists/src/handlers/unwrap_block.rs#L11">unwrap_block.rs</a></p>
 </div>
 <div class="paragraph">
 <p>This assist removes if&#8230;&#8203;else, for, while and loop control statements to just keep the body.</p>
@@ -3263,23 +3271,26 @@ The simplest way for all runnables in a bunch:</p>
   </main>
 
   <footer>
-    <p id="footer-inner">
-      <span class="footer-by">
+    <div id="footer-inner">
+      <div class="footer-by">
         <a href="https://ferrous-systems.com/">
-          <img class="ferrous-logo" src="/assets/ferrous-logo.png">
-          Ferrous Systems
-        </a> & <a href="https://github.com/rust-analyzer/rust-analyzer/graphs/contributors">contributors</a>
-      </span>
-      <a href="/feed.xml" class="footer-link">
-        <i class="fa fa-rss"></i> rss
-      </a>
-      <a href="https://github.com/rust-analyzer/rust-analyzer.github.io" class="footer-link">
-        <i class="fa fa-github"></i> src
-      </a>
-      <a href="https://opencollective.com/rust-analyzer/" class="footer-link">
-        <i class="fa fa-github"></i> sponsor
-      </a>
-    </p>
+          <img class="ferrous-logo" src="/assets/ferrous-logo.png">Ferrous Systems</a>
+        &
+        <a href="https://github.com/rust-analyzer/rust-analyzer/graphs/contributors">contributors</a>
+      </div>
+
+      <div id="footer-links">
+        <a href="/feed.xml" class="footer-link">
+          <i class="fa fa-rss"></i> rss
+        </a>
+        <a href="https://github.com/rust-analyzer/rust-analyzer.github.io" class="footer-link">
+          <i class="fa fa-github"></i> src
+        </a>
+        <a href="https://opencollective.com/rust-analyzer/" class="footer-link">
+          <i class="fa fa-github"></i> sponsor
+        </a>
+      </div>
+    </div>
   </footer>
 </body>
 
