@@ -5,8 +5,8 @@
     <description>rust-analyzer: building a better Rust IDE</description>
     <link>https://rust-analyzer.github.io//</link>
     <atom:link href="https://rust-analyzer.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 17 Aug 2020 14:18:59 +0000</pubDate>
-    <lastBuildDate>Mon, 17 Aug 2020 14:18:59 +0000</lastBuildDate>
+    <pubDate>Tue, 18 Aug 2020 11:08:13 +0000</pubDate>
+    <lastBuildDate>Tue, 18 Aug 2020 11:08:13 +0000</lastBuildDate>
     <generator>Jekyll v3.8.7</generator>
     
       <item>
@@ -51,7 +51,7 @@ Release: &lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/release
 &lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/5746&quot;&gt;&lt;code&gt;#5746&lt;/code&gt;&lt;/a&gt; SSR now handles UFCS calls to trait methods.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/5766&quot;&gt;&lt;code&gt;#5766&lt;/code&gt;&lt;/a&gt; initial support for function-line procedural macros.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/5766&quot;&gt;&lt;code&gt;#5766&lt;/code&gt;&lt;/a&gt; initial support for function-like procedural macros.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
@@ -119,7 +119,7 @@ Release: &lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/release
 &lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/5759&quot;&gt;&lt;code&gt;#5759&lt;/code&gt;&lt;/a&gt; rename &lt;code&gt;hypothetical&lt;/code&gt; &amp;#8594; &lt;code&gt;speculative&lt;/code&gt; (naming inspired by Roslyn).&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/5760&quot;&gt;&lt;code&gt;#5760&lt;/code&gt;&lt;/a&gt; document that `xtask`s should have few dependencies.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/5760&quot;&gt;&lt;code&gt;#5760&lt;/code&gt;&lt;/a&gt; document that &lt;code&gt;xtask&lt;/code&gt;s should have few dependencies.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/5347&quot;&gt;&lt;code&gt;#5347&lt;/code&gt;&lt;/a&gt; add &lt;code&gt;rust-analyzer dump-chalk&lt;/code&gt; command.&lt;/p&gt;
