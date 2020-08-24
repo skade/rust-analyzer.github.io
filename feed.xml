@@ -5,9 +5,120 @@
     <description>rust-analyzer: building a better Rust IDE</description>
     <link>https://rust-analyzer.github.io//</link>
     <atom:link href="https://rust-analyzer.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 24 Aug 2020 11:08:01 +0000</pubDate>
-    <lastBuildDate>Mon, 24 Aug 2020 11:08:01 +0000</lastBuildDate>
+    <pubDate>Mon, 24 Aug 2020 11:51:10 +0000</pubDate>
+    <lastBuildDate>Mon, 24 Aug 2020 11:51:10 +0000</lastBuildDate>
     <generator>Jekyll v3.8.7</generator>
+    
+      <item>
+        <title>Changelog #39</title>
+        <pubDate>Mon, 24 Aug 2020 00:00:00 +0000</pubDate>
+        <link>https://rust-analyzer.github.io//thisweek/2020/08/24/changelog-39.html</link>
+        <guid isPermaLink="true">https://rust-analyzer.github.io//thisweek/2020/08/24/changelog-39.html</guid>
+        <description>&lt;div id=&quot;preamble&quot;&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Commit: &lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/commit/e65d48d1fb3d4d91d9dc1148a7a836ff5c9a3c87&quot;&gt;&lt;code&gt;e65d48d&lt;/code&gt;&lt;/a&gt;&lt;br&gt;
+Release: &lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/releases/2020-08-24&quot;&gt;&lt;code&gt;2020-08-24&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;sponsors&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;#sponsors&quot;&gt;&lt;/a&gt;Sponsors&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;strong&gt;Become a sponsor:&lt;/strong&gt; &lt;a href=&quot;https://opencollective.com/rust-analyzer/&quot;&gt;opencollective.com/rust-analyzer&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;new-features&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;#new-features&quot;&gt;&lt;/a&gt;New Features&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/5821&quot;&gt;&lt;code&gt;#5821&lt;/code&gt;&lt;/a&gt; &lt;strong&gt;Remove Unused Parameter&lt;/strong&gt; refactoring.&lt;/p&gt;
+&lt;div class=&quot;imageblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;img src=&quot;https://user-images.githubusercontent.com/1711539/91040554-bfcc7680-e60e-11ea-905f-548c4308246a.gif&quot; alt=&quot;91040554 bfcc7680 e60e 11ea 905f 548c4308246a&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/5695&quot;&gt;&lt;code&gt;#5695&lt;/code&gt;&lt;/a&gt; completion for unstable features.&lt;/p&gt;
+&lt;div class=&quot;imageblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;img src=&quot;https://user-images.githubusercontent.com/1711539/91040123-feadfc80-e60d-11ea-8f7c-3d0e76e59f5b.gif&quot; alt=&quot;91040123 feadfc80 e60d 11ea 8f7c 3d0e76e59f5b&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/5643&quot;&gt;&lt;code&gt;#5643&lt;/code&gt;&lt;/a&gt; Add new consuming modifier to semantic syntax highlighting, apply consuming and mutable to methods.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/5758&quot;&gt;&lt;code&gt;#5758&lt;/code&gt;&lt;/a&gt; structural search replace now inserts *, &amp;amp; and &amp;amp;mut in the
+replacement to match any auto[de]ref in the matched code.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/5682&quot;&gt;&lt;code&gt;#5682&lt;/code&gt;&lt;/a&gt; allow disabling specific rust-analyzer diagnostics.&lt;/p&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;rouge highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;linenotable&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;linenos gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;{
+  &quot;rust-analyzer.diagnostics.disabled&quot;: [&quot;missing-structure-fields&quot;],
+}
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;fixes&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;#fixes&quot;&gt;&lt;/a&gt;Fixes&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/5782&quot;&gt;&lt;code&gt;#5782&lt;/code&gt;&lt;/a&gt; make status notification confirm with JSON RPC specification.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/5787&quot;&gt;&lt;code&gt;#5787&lt;/code&gt;&lt;/a&gt; fix missing match arm false positive.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/5687&quot;&gt;&lt;code&gt;#5687&lt;/code&gt;&lt;/a&gt; correctly sort &lt;code&gt;DocumentSymbols&lt;/code&gt; for Sublime Text.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;internal-improvements&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;#internal-improvements&quot;&gt;&lt;/a&gt;Internal Improvements&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/5835&quot;&gt;&lt;code&gt;#5835&lt;/code&gt;&lt;/a&gt; publish snapshot-testing library, &lt;code&gt;expect-test&lt;/code&gt; to crates.io: &lt;a href=&quot;https://lib.rs/crates/expect-test&quot; class=&quot;bare&quot;&gt;https://lib.rs/crates/expect-test&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/5776&quot;&gt;&lt;code&gt;#5776&lt;/code&gt;&lt;/a&gt; fix eslint errors on .eslintrc.js and rollup.config.js.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/5790&quot;&gt;&lt;code&gt;#5790&lt;/code&gt;&lt;/a&gt; improve CI time by cleaning &lt;code&gt;traget&lt;/code&gt; dir properly.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/5813&quot;&gt;&lt;code&gt;#5813&lt;/code&gt;&lt;/a&gt; use lld to link rust-analyzer on Windows.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/5824&quot;&gt;&lt;code&gt;#5824&lt;/code&gt;&lt;/a&gt; optimize unused parameters search.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+      </item>
     
       <item>
         <title>Changelog #38</title>
@@ -1705,158 +1816,6 @@ Theme authors can use it to dim injected code.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/5048&quot;&gt;&lt;code&gt;#5048&lt;/code&gt;&lt;/a&gt;, &lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/5056&quot;&gt;&lt;code&gt;#5056&lt;/code&gt;&lt;/a&gt; Canonicalize actor API.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;</description>
-      </item>
-    
-      <item>
-        <title>Changelog #30</title>
-        <pubDate>Mon, 22 Jun 2020 00:00:00 +0000</pubDate>
-        <link>https://rust-analyzer.github.io//thisweek/2020/06/22/changelog-30.html</link>
-        <guid isPermaLink="true">https://rust-analyzer.github.io//thisweek/2020/06/22/changelog-30.html</guid>
-        <description>&lt;div id=&quot;preamble&quot;&gt;
-&lt;div class=&quot;sectionbody&quot;&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;Commit: &lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/commit/3370c81525c89c4f3229180f83520de29b7ee8a0&quot;&gt;&lt;code&gt;3370c81&lt;/code&gt;&lt;/a&gt;&lt;br&gt;
-Release: &lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/releases/2020-06-22&quot;&gt;&lt;code&gt;2020-06-22&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;sect1&quot;&gt;
-&lt;h2 id=&quot;sponsors&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;#sponsors&quot;&gt;&lt;/a&gt;Sponsors&lt;/h2&gt;
-&lt;div class=&quot;sectionbody&quot;&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;This week, we&amp;#8217;d like to thank another long-time sponsor:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;&lt;a href=&quot;https://discord.com&quot;&gt;Discord&lt;/a&gt;, a place to talk with your communities and friends, built using &lt;a href=&quot;https://discord.gg/rust-lang&quot;&gt;Rust&lt;/a&gt; and other best-in-class tools.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;sect1&quot;&gt;
-&lt;h2 id=&quot;new-features&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;#new-features&quot;&gt;&lt;/a&gt;New Features&lt;/h2&gt;
-&lt;div class=&quot;sectionbody&quot;&gt;
-&lt;div class=&quot;ulist&quot;&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/4839&quot;&gt;&lt;code&gt;#4839&lt;/code&gt;&lt;/a&gt; implement goto type definition for inlay hints&lt;/p&gt;
-&lt;div class=&quot;imageblock&quot;&gt;
-&lt;div class=&quot;content&quot;&gt;
-&lt;img src=&quot;https://user-images.githubusercontent.com/62505555/83335671-0122e380-a2b7-11ea-9922-fbdcfb11a7f3.gif&quot; alt=&quot;83335671 0122e380 a2b7 11ea 9922 fbdcfb11a7f3&quot;&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/4851&quot;&gt;&lt;code&gt;#4851&lt;/code&gt;&lt;/a&gt; add quickfix to add a struct field&lt;/p&gt;
-&lt;div class=&quot;imageblock&quot;&gt;
-&lt;div class=&quot;content&quot;&gt;
-&lt;img src=&quot;https://user-images.githubusercontent.com/1711539/85289481-d253f380-b497-11ea-8089-2f21e3fdb75e.gif&quot; alt=&quot;85289481 d253f380 b497 11ea 8089 2f21e3fdb75e&quot;&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/4860&quot;&gt;&lt;code&gt;#4860&lt;/code&gt;&lt;/a&gt; accept relative paths in rust-project.json.
-If a relative path is found as part of Crate.root_module or Root.path, interpret it as relative to the location of the rust-project.json file.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/4878&quot;&gt;&lt;code&gt;#4878&lt;/code&gt;&lt;/a&gt; make &lt;strong&gt;Replace Qualified Name With Use&lt;/strong&gt; replace &lt;strong&gt;all&lt;/strong&gt; mentions of the path.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/4919&quot;&gt;&lt;code&gt;#4919&lt;/code&gt;&lt;/a&gt; Structural Search Replace no longer requires to specify the type of the capture.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/4916&quot;&gt;&lt;code&gt;#4916&lt;/code&gt;&lt;/a&gt; add configuration options to treat certain &lt;code&gt;cargo check&lt;/code&gt; warnings with hint or information severity.&lt;/p&gt;
-&lt;div class=&quot;listingblock&quot;&gt;
-&lt;div class=&quot;content&quot;&gt;
-&lt;pre class=&quot;rouge highlight&quot;&gt;&lt;code data-lang=&quot;json&quot;&gt;&lt;table class=&quot;linenotable&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;linenos gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-5
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;rust-analyzer.diagnostics.warningsAsHint&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;unused_variables&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/4925&quot;&gt;&lt;code&gt;#4925&lt;/code&gt;&lt;/a&gt; highlighting escape sequences in strings.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/4903&quot;&gt;&lt;code&gt;#4903&lt;/code&gt;&lt;/a&gt; add &lt;code&gt;documentation&lt;/code&gt; to the list of semantic tokens modifiers for code inside doc comments.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/4963&quot;&gt;&lt;code&gt;#4963&lt;/code&gt;&lt;/a&gt; download artifacts into tmp dir.
-This should prevent partially downloaded files in cases when the user closes vsode before the download is complete.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/4969&quot;&gt;&lt;code&gt;#4969&lt;/code&gt;&lt;/a&gt; handle bindings after @ in patterns.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;sect1&quot;&gt;
-&lt;h2 id=&quot;fixes&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;#fixes&quot;&gt;&lt;/a&gt;Fixes&lt;/h2&gt;
-&lt;div class=&quot;sectionbody&quot;&gt;
-&lt;div class=&quot;ulist&quot;&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/4877&quot;&gt;&lt;code&gt;#4877&lt;/code&gt;&lt;/a&gt; fix syntax highlighting of recursive macros.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/4876&quot;&gt;&lt;code&gt;#4876&lt;/code&gt;&lt;/a&gt; don&amp;#8217;t highlight unresolved references in doc comments.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/4915&quot;&gt;&lt;code&gt;#4915&lt;/code&gt;&lt;/a&gt; only highlight rust code in doc comments.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/4959&quot;&gt;&lt;code&gt;#4959&lt;/code&gt;&lt;/a&gt; syntax highlighting for documentation comments on macro definitions.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/4914&quot;&gt;&lt;code&gt;#4914&lt;/code&gt;&lt;/a&gt;, &lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/4930&quot;&gt;&lt;code&gt;#4930&lt;/code&gt;&lt;/a&gt; fix panic in match checking.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/4821&quot;&gt;&lt;code&gt;#4821&lt;/code&gt;&lt;/a&gt; display doctest code lens before comment.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/4950&quot;&gt;&lt;code&gt;#4950&lt;/code&gt;&lt;/a&gt;, &lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/4952&quot;&gt;&lt;code&gt;#4952&lt;/code&gt;&lt;/a&gt;, &lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/4957&quot;&gt;&lt;code&gt;#4957&lt;/code&gt;&lt;/a&gt; fix panics in type inference.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/4958&quot;&gt;&lt;code&gt;#4958&lt;/code&gt;&lt;/a&gt; fix type inference for Fn traits.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;sect1&quot;&gt;
-&lt;h2 id=&quot;internal-improvements&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;#internal-improvements&quot;&gt;&lt;/a&gt;Internal Improvements&lt;/h2&gt;
-&lt;div class=&quot;sectionbody&quot;&gt;
-&lt;div class=&quot;ulist&quot;&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/4891&quot;&gt;&lt;code&gt;#4891&lt;/code&gt;&lt;/a&gt;, &lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/4948&quot;&gt;&lt;code&gt;#4948&lt;/code&gt;&lt;/a&gt; add API for the new Virtual File System.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/4947&quot;&gt;&lt;code&gt;#4947&lt;/code&gt;&lt;/a&gt; improve type checking to use up to 20% less memory.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/4934&quot;&gt;&lt;code&gt;#4934&lt;/code&gt;&lt;/a&gt; directly leverage salsa queries for computing symbol index.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/4937&quot;&gt;&lt;code&gt;#4937&lt;/code&gt;&lt;/a&gt; allow overriding rust-analyzer display version.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/4961&quot;&gt;&lt;code&gt;#4961&lt;/code&gt;&lt;/a&gt;, &lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/4964&quot;&gt;&lt;code&gt;#4964&lt;/code&gt;&lt;/a&gt; centralize in-flight LSP requests handling.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/4962&quot;&gt;&lt;code&gt;#4962&lt;/code&gt;&lt;/a&gt; expand parsing API to allow more node types for SSR.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;

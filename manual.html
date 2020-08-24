@@ -1002,7 +1002,7 @@ This approach has limitations, the caret movement and bracket highlighting near 
 <div class="sect2">
 <h3 id="magic-completions"><a class="anchor" href="#magic-completions"></a>Magic Completions</h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ide/src/completion.rs#L39">completion.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ide/src/completion.rs#L40">completion.rs</a></p>
 </div>
 <div class="paragraph">
 <p>In addition to usual reference completion, rust-analyzer provides some ✨magic✨
@@ -1364,7 +1364,10 @@ code in the <code>foo</code> module, we&#8217;ll insert just <code>Bar</code>.</
 </div>
 <div class="paragraph">
 <p>Inherent method calls should generally be written in UFCS form. e.g. <code>foo::Bar::baz($s, $a)</code> will
-match <code>$s.baz($a)</code>, provided the method call <code>baz</code> resolves to the method <code>foo::Bar::baz</code>.</p>
+match <code>$s.baz($a)</code>, provided the method call <code>baz</code> resolves to the method <code>foo::Bar::baz</code>. When a
+placeholder is the receiver of a method call in the search pattern (e.g. <code>$s.foo()</code>), but not in
+the replacement template (e.g. <code>bar($s)</code>), then *, &amp; and &amp;mut will be added as needed to mirror
+whatever autoderef and autoref was happening implicitly in the matched code.</p>
 </div>
 <div class="paragraph">
 <p>The scope of the search / replace will be restricted to the current selection if any, otherwise
@@ -1599,7 +1602,7 @@ Cursor position or selection is signified by <code>┃</code> character.</p>
 </div>
 <h3 id="add_impl_default_members" class="discrete"><code>add_impl_default_members</code></h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/assists/src/handlers/add_missing_impl_members.rs#L64">add_missing_impl_members.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/assists/src/handlers/add_missing_impl_members.rs#L63">add_missing_impl_members.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Adds scaffold for overriding default impl members.</p>
@@ -1656,8 +1659,8 @@ Cursor position or selection is signified by <code>┃</code> character.</p>
 <span class="k">impl</span> <span class="n">Trait</span> <span class="k">for</span> <span class="p">()</span> <span class="p">{</span>
     <span class="n">Type</span> <span class="n">X</span> <span class="o">=</span> <span class="p">();</span>
     <span class="k">fn</span> <span class="nf">foo</span><span class="p">(</span><span class="o">&amp;</span><span class="k">self</span><span class="p">)</span> <span class="p">{}</span>
-    <span class="err">$</span><span class="mi">0</span><span class="k">fn</span> <span class="nf">bar</span><span class="p">(</span><span class="o">&amp;</span><span class="k">self</span><span class="p">)</span> <span class="p">{}</span>
 
+    <span class="err">$</span><span class="mi">0</span><span class="k">fn</span> <span class="nf">bar</span><span class="p">(</span><span class="o">&amp;</span><span class="k">self</span><span class="p">)</span> <span class="p">{}</span>
 <span class="p">}</span>
 </pre></td></tr></tbody></table></code></pre>
 </div>
@@ -1707,7 +1710,6 @@ Cursor position or selection is signified by <code>┃</code> character.</p>
  9
 10
 11
-12
 </pre></td><td class="code"><pre><span class="k">trait</span> <span class="n">Trait</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="p">{</span>
     <span class="n">Type</span> <span class="n">X</span><span class="p">;</span>
     <span class="k">fn</span> <span class="nf">foo</span><span class="p">(</span><span class="o">&amp;</span><span class="k">self</span><span class="p">)</span> <span class="k">-&gt;</span> <span class="n">T</span><span class="p">;</span>
@@ -1718,7 +1720,6 @@ Cursor position or selection is signified by <code>┃</code> character.</p>
     <span class="k">fn</span> <span class="nf">foo</span><span class="p">(</span><span class="o">&amp;</span><span class="k">self</span><span class="p">)</span> <span class="k">-&gt;</span> <span class="nb">u32</span> <span class="p">{</span>
         <span class="err">$</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="nd">todo!</span><span class="p">()}</span>
     <span class="p">}</span>
-
 <span class="p">}</span>
 </pre></td></tr></tbody></table></code></pre>
 </div>
@@ -2582,7 +2583,7 @@ on <code>if</code>.</p>
 </div>
 <h3 id="merge_imports" class="discrete"><code>merge_imports</code></h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/assists/src/handlers/merge_imports.rs#L14">merge_imports.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/assists/src/handlers/merge_imports.rs#L15">merge_imports.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Merges two imports with a common prefix.</p>
@@ -2880,6 +2881,45 @@ on <code>if</code>.</p>
 3
 </pre></td><td class="code"><pre><span class="k">impl</span> <span class="n">Walrus</span> <span class="p">{</span>
     <span class="k">fn</span> <span class="nf">feed</span><span class="p">(</span><span class="o">&amp;</span><span class="k">self</span><span class="p">,</span> <span class="n">amount</span><span class="p">:</span> <span class="nb">u32</span><span class="p">)</span> <span class="p">{}</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre>
+</div>
+</div>
+<h3 id="remove_unused_param" class="discrete"><code>remove_unused_param</code></h3>
+<div class="paragraph">
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/assists/src/handlers/remove_unused_param.rs#L13">remove_unused_param.rs</a></p>
+</div>
+<div class="paragraph">
+<p>Removes unused function parameter.</p>
+</div>
+<div class="listingblock">
+<div class="title">Before</div>
+<div class="content">
+<pre class="rouge highlight"><code data-lang="rust"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="code"><pre><span class="k">fn</span> <span class="nf">frobnicate</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">i32</span><span class="err">┃</span><span class="p">)</span> <span class="p">{}</span>
+
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nf">frobnicate</span><span class="p">(</span><span class="mi">92</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">After</div>
+<div class="content">
+<pre class="rouge highlight"><code data-lang="rust"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="code"><pre><span class="k">fn</span> <span class="nf">frobnicate</span><span class="p">()</span> <span class="p">{}</span>
+
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nf">frobnicate</span><span class="p">();</span>
 <span class="p">}</span>
 </pre></td></tr></tbody></table></code></pre>
 </div>
