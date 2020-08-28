@@ -5,9 +5,9 @@
     <description>rust-analyzer: building a better Rust IDE</description>
     <link>https://rust-analyzer.github.io//</link>
     <atom:link href="https://rust-analyzer.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 24 Aug 2020 11:51:10 +0000</pubDate>
-    <lastBuildDate>Mon, 24 Aug 2020 11:51:10 +0000</lastBuildDate>
-    <generator>Jekyll v3.8.7</generator>
+    <pubDate>Fri, 28 Aug 2020 15:13:18 +0000</pubDate>
+    <lastBuildDate>Fri, 28 Aug 2020 15:13:18 +0000</lastBuildDate>
+    <generator>Jekyll v3.9.0</generator>
     
       <item>
         <title>Changelog #39</title>
