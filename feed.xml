@@ -5,8 +5,8 @@
     <description>rust-analyzer: building a better Rust IDE</description>
     <link>https://rust-analyzer.github.io//</link>
     <atom:link href="https://rust-analyzer.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 28 Aug 2020 16:41:17 +0000</pubDate>
-    <lastBuildDate>Fri, 28 Aug 2020 16:41:17 +0000</lastBuildDate>
+    <pubDate>Fri, 28 Aug 2020 16:45:40 +0000</pubDate>
+    <lastBuildDate>Fri, 28 Aug 2020 16:45:40 +0000</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
@@ -117,6 +117,75 @@ replacement to match any auto[de]ref in the matched code.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;/div&gt;</description>
+      </item>
+    
+      <item>
+        <title>&lt;code&gt;2020[..6]&lt;/code&gt; Financial Report</title>
+        <pubDate>Thu, 20 Aug 2020 00:00:00 +0000</pubDate>
+        <link>https://rust-analyzer.github.io//blog/2020/08/20/financial-report.html</link>
+        <guid isPermaLink="true">https://rust-analyzer.github.io//blog/2020/08/20/financial-report.html</guid>
+        <description>&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;This is a short financial report for &lt;a href=&quot;https://opencollective.com/rust-analyzer/&quot;&gt;Open Collective&lt;/a&gt; for the first half of 2020, from 01-01-2020 until 30-06-2020.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;As we haven&amp;#8217;t noted the exact date of the previous report, the numbers in this one will be approximate :(
+It probably is good that @matklad didn&amp;#8217;t choose accounting as a career.
+The next report should be exact though.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;We&amp;#8217;ve got about 14000  EUR on open collective after fees.
+Of which we distributed 12000 EUR by splitting it into two buckets:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;50% for Ferrous Systems&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;50% for contributors, not affiliated with Ferrous&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;We were able to pay more than our usual 20% to contributors because we managed to do some direct contracting work for rust-analyzer.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Ferrous share went to paying for part of &lt;a href=&quot;https://github.com/matklad&quot;&gt;@matklad&lt;/a&gt;'s time and for administrative tasks.
+3000 EUR were paid to &lt;a href=&quot;https://github.com/flodiebold&quot;&gt;@flodiebold&lt;/a&gt; for chalk integration and various other type system improvements.
+3000 EUR were paid to &lt;a href=&quot;https://github.com/edwin0cheng&quot;&gt;@edwin0cheng&lt;/a&gt; for implementing most of declarative and procedural macro support.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Our biggest Open Collective sponsors in the first half of 2020 are:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.embark-studios.com&quot;&gt;Embark Studios&lt;/a&gt; (6000EUR)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://discordapp.com&quot;&gt;Discord&lt;/a&gt; (1500EUR)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://parity.io&quot;&gt;Parity&lt;/a&gt; (1500EUR)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.prisma.io/&quot;&gt;Prisma&lt;/a&gt; (1200EUR)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/repi&quot;&gt;Johan Andersson of Embark&lt;/a&gt; (1100EUR)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&amp;lt;3&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;If you use rust-analyzer professionally, consider asking your company to &lt;a href=&quot;https://opencollective.com/rust-analyzer/&quot;&gt;sponsor&lt;/a&gt; the development of this project.
+We are also planning to announce a couple of new ways to support rust-analyzer development soon, stay tuned!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;As a reminder, we publish &lt;a href=&quot;https://rust-analyzer.github.io/thisweek&quot;&gt;weekly changelogs&lt;/a&gt; to report the progress on rust-analyzer and explain where the money goes.&lt;/p&gt;
 &lt;/div&gt;</description>
       </item>
     
@@ -1662,160 +1731,6 @@ This saves roughly 90 MB in &lt;code&gt;ImplsFromDepsQuery&lt;/code&gt;, which u
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/5222&quot;&gt;&lt;code&gt;#5222&lt;/code&gt;&lt;/a&gt; add &quot;rehighlight after adding a new top-level function&quot; to the set of bechmarks.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;</description>
-      </item>
-    
-      <item>
-        <title>Changelog #31</title>
-        <pubDate>Mon, 29 Jun 2020 00:00:00 +0000</pubDate>
-        <link>https://rust-analyzer.github.io//thisweek/2020/06/29/changelog-31.html</link>
-        <guid isPermaLink="true">https://rust-analyzer.github.io//thisweek/2020/06/29/changelog-31.html</guid>
-        <description>&lt;div id=&quot;preamble&quot;&gt;
-&lt;div class=&quot;sectionbody&quot;&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;Commit: &lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/commit/ca31b1d63ae91a69f1ce9c0b075403834ba19f38&quot;&gt;&lt;code&gt;ca31b1d&lt;/code&gt;&lt;/a&gt;&lt;br&gt;
-Release: &lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/releases/2020-06-29&quot;&gt;&lt;code&gt;2020-06-29&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;sect1&quot;&gt;
-&lt;h2 id=&quot;sponsors&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;#sponsors&quot;&gt;&lt;/a&gt;Sponsors&lt;/h2&gt;
-&lt;div class=&quot;sectionbody&quot;&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;This week, we&amp;#8217;d like to thank another long-time sponsor:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.parity.io/&quot;&gt;Parity&lt;/a&gt; is building tooling and infrastructure for the decentralised, trustless Web in Rust.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;sect1&quot;&gt;
-&lt;h2 id=&quot;new-features&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;#new-features&quot;&gt;&lt;/a&gt;New Features&lt;/h2&gt;
-&lt;div class=&quot;sectionbody&quot;&gt;
-&lt;div class=&quot;ulist&quot;&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/4990&quot;&gt;&lt;code&gt;#4990&lt;/code&gt;&lt;/a&gt; introduce an &lt;code&gt;ItemTree&lt;/code&gt; layer to avoid reparsing files.
-This reduces the latency of &quot;go to definition&quot; in a simple benchmark on rust-analyzer by around 30%.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/5017&quot;&gt;&lt;code&gt;#5017&lt;/code&gt;&lt;/a&gt; add custom cargo runners support. This adds an option to delegate actual cargo commands building to another extension.
-For example, to use a different manager like &lt;a href=&quot;https://github.com/rust-embedded/cross&quot;&gt;cross&lt;/a&gt;.
-&lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=vsrs.cross-rust-analyzer&quot;&gt;cross-rust-analyzer&lt;/a&gt; is an example of such extension.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/5069&quot;&gt;&lt;code&gt;#5069&lt;/code&gt;&lt;/a&gt; &lt;strong&gt;Extract Variable&lt;/strong&gt; understands field init shorthand&lt;/p&gt;
-&lt;div class=&quot;imageblock&quot;&gt;
-&lt;div class=&quot;content&quot;&gt;
-&lt;img src=&quot;https://user-images.githubusercontent.com/1711539/86007529-d2b03980-ba17-11ea-998f-0e44f659041f.gif&quot; alt=&quot;86007529 d2b03980 ba17 11ea 998f 0e44f659041f&quot;&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/4999&quot;&gt;&lt;code&gt;#4999&lt;/code&gt;&lt;/a&gt; allow matching of whole macro calls in structural search replace.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/5007&quot;&gt;&lt;code&gt;#5007&lt;/code&gt;&lt;/a&gt; allow matching within macro calls in structural search replace.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/4997&quot;&gt;&lt;code&gt;#4997&lt;/code&gt;&lt;/a&gt; document GNOME Builder (Nightly) support for rust-analyzer.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/4940&quot;&gt;&lt;code&gt;#4940&lt;/code&gt;&lt;/a&gt; set &lt;code&gt;injected&lt;/code&gt; modifier for code in doctests.
-Theme authors can use it to dim injected code.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/5047&quot;&gt;&lt;code&gt;#5047&lt;/code&gt;&lt;/a&gt; matching brace works for | in lambdas&lt;/p&gt;
-&lt;div class=&quot;imageblock&quot;&gt;
-&lt;div class=&quot;content&quot;&gt;
-&lt;img src=&quot;https://user-images.githubusercontent.com/1711539/86006971-122a5600-ba17-11ea-8be7-f60b0a97eead.gif&quot; alt=&quot;86006971 122a5600 ba17 11ea 8be7 f60b0a97eead&quot;&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/5066&quot;&gt;&lt;code&gt;#5066&lt;/code&gt;&lt;/a&gt; infer type for slice wildcard patterns.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/4587&quot;&gt;&lt;code&gt;#4587&lt;/code&gt;&lt;/a&gt; missing unsafe diagnostics.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/5100&quot;&gt;&lt;code&gt;#5100&lt;/code&gt;&lt;/a&gt;, &lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/5102&quot;&gt;&lt;code&gt;#5102&lt;/code&gt;&lt;/a&gt;: Add support for &lt;code&gt;include_str&lt;/code&gt; and &lt;code&gt;include_bytes&lt;/code&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;sect1&quot;&gt;
-&lt;h2 id=&quot;fixes&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;#fixes&quot;&gt;&lt;/a&gt;Fixes&lt;/h2&gt;
-&lt;div class=&quot;sectionbody&quot;&gt;
-&lt;div class=&quot;ulist&quot;&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/4900&quot;&gt;&lt;code&gt;#4900&lt;/code&gt;&lt;/a&gt; fix name resolution for &lt;code&gt;Self&lt;/code&gt; in enums.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/4988&quot;&gt;&lt;code&gt;#4988&lt;/code&gt;&lt;/a&gt; don&amp;#8217;t offer to add missing fields of unknown types.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/4992&quot;&gt;&lt;code&gt;#4992&lt;/code&gt;&lt;/a&gt; never disable error logging on the frontend.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/5002&quot;&gt;&lt;code&gt;#5002&lt;/code&gt;&lt;/a&gt; fix underflow panic when doctests are at top of file.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/5004&quot;&gt;&lt;code&gt;#5004&lt;/code&gt;&lt;/a&gt; fix panic in split/merge import assists.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/5023&quot;&gt;&lt;code&gt;#5023&lt;/code&gt;&lt;/a&gt; fix string literal inference in match.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/5015&quot;&gt;&lt;code&gt;#5015&lt;/code&gt;&lt;/a&gt; account for updated module ids when determining whether a resolution is changed.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/5033&quot;&gt;&lt;code&gt;#5033&lt;/code&gt;&lt;/a&gt; order of glob imports does not affect import shadowing.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;sect1&quot;&gt;
-&lt;h2 id=&quot;internal-improvements&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;#internal-improvements&quot;&gt;&lt;/a&gt;Internal Improvements&lt;/h2&gt;
-&lt;div class=&quot;sectionbody&quot;&gt;
-&lt;div class=&quot;ulist&quot;&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/4976&quot;&gt;&lt;code&gt;#4976&lt;/code&gt;&lt;/a&gt; new VFS.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/5068&quot;&gt;&lt;code&gt;#5068&lt;/code&gt;&lt;/a&gt; prepare for dynamic project reloading.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Rewrite main loop in rust-analyzer.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/4982&quot;&gt;&lt;code&gt;#4982&lt;/code&gt;&lt;/a&gt; upgrade chalk. This, and other type system improvements, bring the proportion of of unknown types in rust-analzyer to less than 1%.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/4983&quot;&gt;&lt;code&gt;#4983&lt;/code&gt;&lt;/a&gt;, &lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/5010&quot;&gt;&lt;code&gt;#5010&lt;/code&gt;&lt;/a&gt; add &lt;code&gt;paths::RelPath[Buf]&lt;/code&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/5013&quot;&gt;&lt;code&gt;#5013&lt;/code&gt;&lt;/a&gt; uniformly trim test data.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/5014&quot;&gt;&lt;code&gt;#5014&lt;/code&gt;&lt;/a&gt; centralize test data parsing.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/5029&quot;&gt;&lt;code&gt;#5029&lt;/code&gt;&lt;/a&gt; use &lt;code&gt;paths::AbsPath&lt;/code&gt; in more places.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/5034&quot;&gt;&lt;code&gt;#5034&lt;/code&gt;&lt;/a&gt; cleanup project.json deserialization.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/5048&quot;&gt;&lt;code&gt;#5048&lt;/code&gt;&lt;/a&gt;, &lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/5056&quot;&gt;&lt;code&gt;#5056&lt;/code&gt;&lt;/a&gt; Canonicalize actor API.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
