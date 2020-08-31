@@ -649,10 +649,30 @@ However, if you use some other build system, you&#8217;ll have to describe the s
 52
 53
 54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
 </pre></td><td class="code"><pre>interface JsonProject {
-   /// The set of crates comprising the current project.
-   /// Must include all transitive dependencies as well as sysroot crate (libstd, libcore and such).
-   crates: Crate[];
+    /// Path to the directory with *source code* of sysroot crates.
+    ///
+    /// It should point to the directory where std, core, and friends can be found:
+    /// https://github.com/rust-lang/rust/tree/master/library.
+    ///
+    /// If provided, rust-analyzer automatically adds dependencies on sysroot
+    /// crates. Conversely, if you omit this path, you can specify sysroot
+    /// dependencies yourself and, for example, have several different "sysroots" in
+    /// one graph of crates.
+    sysroot_src?: string;
+    /// The set of crates comprising the current project.
+    /// Must include all transitive dependencies as well as sysroot crate (libstd, libcore and such).
+    crates: Crate[];
 }
 
 interface Crate {
@@ -731,6 +751,9 @@ Specifically, the <code>roots</code> setup will be different eventually.</p>
 </div>
 <div class="paragraph">
 <p>See <a href="https://github.com/rust-analyzer/rust-project.json-example" class="bare">https://github.com/rust-analyzer/rust-project.json-example</a> for a small example.</p>
+</div>
+<div class="paragraph">
+<p>You can set <code>RA_LOG</code> environmental variable to <code>rust_analyzer=info</code> to inspect how rust-analyzer handles config and project loading.</p>
 </div>
 </div>
 </div>
@@ -916,7 +939,7 @@ Specifically, the <code>roots</code> setup will be different eventually.</p>
 <div class="sect2">
 <h3 id="hover"><a class="anchor" href="#hover"></a>Hover</h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ide/src/hover.rs#L73">hover.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/ide/src/hover.rs#L74">hover.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Shows additional information, like type of an expression or documentation for definition when "focusing" code.
@@ -1973,7 +1996,7 @@ This means something of the form <code>!x</code> or <code>x != y</code>.</p>
 </div>
 <h3 id="extract_struct_from_enum_variant" class="discrete"><code>extract_struct_from_enum_variant</code></h3>
 <div class="paragraph">
-<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/assists/src/handlers/extract_struct_from_enum_variant.rs#L16">extract_struct_from_enum_variant.rs</a></p>
+<p><strong>Source:</strong> <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/crates/assists/src/handlers/extract_struct_from_enum_variant.rs#L17">extract_struct_from_enum_variant.rs</a></p>
 </div>
 <div class="paragraph">
 <p>Extracts a struct from enum variant.</p>
@@ -3187,6 +3210,46 @@ the definition.</p>
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="vs-code-2"><a class="anchor" href="#vs-code-2"></a>VS Code</h3>
+<div class="sect3">
+<h4 id="color-configurations"><a class="anchor" href="#color-configurations"></a>Color configurations</h4>
+<div class="paragraph">
+<p>It is possible to change the foreground/background color of inlay hints. Just add this to your
+<code>settings.json</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="jsonc"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+</pre></td><td class="code"><pre><span class="p">{</span><span class="w">
+  </span><span class="nl">"workbench.colorCustomizations"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="c1">// Name of the theme you are currently using</span><span class="w">
+    </span><span class="nl">"[Default Dark+]"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"rust_analyzer.inlayHints.foreground"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#868686f0"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"rust_analyzer.inlayHints.background"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#3d3d3d48"</span><span class="p">,</span><span class="w">
+
+      </span><span class="c1">// Overrides for specific kinds of inlay hints</span><span class="w">
+      </span><span class="nl">"rust_analyzer.inlayHints.foreground.typeHints"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#fdb6fdf0"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"rust_analyzer.inlayHints.foreground.paramHints"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#fdb6fdf0"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"rust_analyzer.inlayHints.background.chainingHints"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#6b0c0c81"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre>
+</div>
+</div>
+</div>
 <div class="sect3">
 <h4 id="special-when-clause-context-for-keybindings"><a class="anchor" href="#special-when-clause-context-for-keybindings"></a>Special <code>when</code> clause context for keybindings.</h4>
 <div class="paragraph">
