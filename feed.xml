@@ -5,8 +5,8 @@
     <description>rust-analyzer: building a better Rust IDE</description>
     <link>https://rust-analyzer.github.io//</link>
     <atom:link href="https://rust-analyzer.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 31 Aug 2020 11:36:59 +0000</pubDate>
-    <lastBuildDate>Mon, 31 Aug 2020 11:36:59 +0000</lastBuildDate>
+    <pubDate>Mon, 31 Aug 2020 11:43:25 +0000</pubDate>
+    <lastBuildDate>Mon, 31 Aug 2020 11:43:25 +0000</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
@@ -38,6 +38,11 @@ Release: &lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/release
 &lt;div class=&quot;sectionbody&quot;&gt;
 &lt;div class=&quot;ulist&quot;&gt;
 &lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://rust-lang.github.io/compiler-team/working-groups/parselib/&quot;&gt;wg-parselib&lt;/a&gt; is formed to tackle the hard task of sharing the parser between rust-analyzer and rustc.
+Join discussion on &lt;a href=&quot;https://rust-lang.zulipchat.com/#narrow/stream/254930-t-compiler.2Fwg-parselib&quot;&gt;Zulip&lt;/a&gt; or look for
+&lt;a href=&quot;https://github.com/rust-lang/rust/issues?q=label%3AWG-parselib+&quot;&gt;WG-parslib&lt;/a&gt; tagged issues in rust-lang/rust.&lt;/p&gt;
+&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/rust-analyzer/rust-analyzer/pull/5859&quot;&gt;&lt;code&gt;#5859&lt;/code&gt;&lt;/a&gt; automatically publish rust-analyzer crates with &lt;code&gt;ra_ap&lt;/code&gt; prefix: &lt;a href=&quot;https://crates.io/search?q=ra_ap&quot; class=&quot;bare&quot;&gt;https://crates.io/search?q=ra_ap&lt;/a&gt;.
 You can use these crates to build your own tooling on top of rust-analyzer, which can be compile with stable &lt;code&gt;rustc&lt;/code&gt;.
